@@ -9,6 +9,20 @@ public class QrTempScanValidateDto implements Serializable {
 	private String accessCode;
 
     private String temperature;
+    
+    private String userEmailId;
+
+	public String getUserEmailId() {
+		return userEmailId;
+	}
+
+	public void setUserEmailId(String userEmailId) {
+		this.userEmailId = userEmailId;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 
 	public String getAccessCode() {
 		return accessCode;
@@ -27,6 +41,7 @@ public class QrTempScanValidateDto implements Serializable {
 	}	
 	@Override
 	public String toString() {
-		return "QrTempScanValidateDto [accessCode=" + accessCode + ", temperature=" + temperature + "]";
+		return "QrTempScanValidateDto [accessCode=" + accessCode + ", temperature=" + temperature + ", userEmailId="
+				+ userEmailId + "]";
 	}
 }
