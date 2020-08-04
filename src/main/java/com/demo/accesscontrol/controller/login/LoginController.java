@@ -33,6 +33,7 @@ import com.demo.accesscontrol.common.util.AccessCtrlConstant;
 import com.demo.accesscontrol.common.util.CommonUtil;
 import com.demo.accesscontrol.common.util.ConfigProperties;
 import com.demo.accesscontrol.common.util.QRGenerationUtil;
+import com.demo.accesscontrol.dto.QrTempScanValidateDto;
 import com.demo.accesscontrol.dto.ResponseDto;
 import com.demo.accesscontrol.dto.UserDto;
 import com.demo.accesscontrol.entity.User;
@@ -389,8 +390,11 @@ public class LoginController {
 			return new ResponseEntity(userList,HttpStatus.OK);
 			
 		}
-		
-
-		
-		
+		@PostMapping("/qrScanValidate")
+		public ResponseEntity<QrTempScanValidateDto>  getQrTempScanValidateRequest(@Valid  @RequestBody QrTempScanValidateDto userValidate){
+			System.out.println(userValidate.getAccessCode());
+			System.out.println(userValidate.getTemperature());
+			return null;
+			
+		}
 }

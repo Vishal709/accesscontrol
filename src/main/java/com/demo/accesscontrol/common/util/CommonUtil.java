@@ -1,6 +1,11 @@
 package com.demo.accesscontrol.common.util;
 
+import java.awt.image.BufferedImage;
 import java.lang.reflect.Field;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+
 /**
  * @author Tushar mahajan
  *
@@ -64,7 +69,7 @@ public class CommonUtil {
 					 f.setAccessible(true);
 					  f2=cls2.getDeclaredField(f.getName());
 					  // if (f1.getType().equals(f2.getType()))
-					 if(null!=f.get(object1) && !((String) f.get(object1)).trim().isEmpty() && !((String) f.get(object1)).trim().isBlank()) {
+					 if(null!=f.get(object1) && !((String) f.get(object1)).trim().isEmpty() /*&& !((String) f.get(object1)).trim().isBlank()*/) {
 						 f2.setAccessible(true);
 						 f2.set(object2, f.get(object1));
 					 }
@@ -109,7 +114,8 @@ public class CommonUtil {
 						 continue;
 					 }
 					 
-					 if(null!=f.get(object1) && !((String) f.get(object1)).trim().isEmpty() && !((String) f.get(object1)).trim().isBlank()) {
+					if (null != f.get(object1) && !((String) f.get(object1)).trim()
+							.isEmpty()/* && !((String) f.get(object1)).trim().isBlank() */) {
 						 f2.setAccessible(true);
 						 f2.set(object2, f.get(object1));
 					 }
@@ -125,5 +131,16 @@ public class CommonUtil {
 		 		
 		return object2;
 	}
+	
+//	public static ResponseEntity<BufferedImage> qrcode(String uniqueQrCode)
+//		    throws Exception {
+//			 //String barcodeText = "qrcode";
+//		        return okResponse(QrCodeGenerator.generateQRCodeImage(uniqueQrCode));
+//		    }
+//		 
+//		 private static ResponseEntity<BufferedImage> okResponse(BufferedImage image) {
+//		        return new ResponseEntity<>(image, HttpStatus.OK);
+//		    }
+		 
 	
 }

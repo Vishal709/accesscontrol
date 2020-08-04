@@ -22,4 +22,13 @@ public static final String RECEIVE_EMAIL="receivingEmail";
 public static final String ATTACHEMENT="attachement";
 public static final String MIME_MSG_CONTENT="mimeMsgContent";
 
+public static final String remote_user_name="sftpuser";
+public static final String remote_host_url="178.159.3.134";
+public static final String remote_user_passwd="GnJayC*2a%ZZ";
+public static final String aws_known_hosts_path="/home/ubuntu/known_hosts";
+public static final String qrFileUploadPath ="/uploads/qrcodes/";
+public static final String qr_temp_file_path  ="E:\\qrfileupload\\";
+
+
+
 }

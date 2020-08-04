@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.demo.accesscontrol.commons.util.CommonUtil;
+import com.demo.accesscontrol.common.util.CommonUtil;
 import com.demo.accesscontrol.dto.RoleMasterDto;
 import com.demo.accesscontrol.entity.RoleMaster;
 import com.demo.accesscontrol.repository.RoleMasterRepository;

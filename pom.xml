@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.demo</groupId>
-	<artifactId>accesscontrole</artifactId>
+	<artifactId>accesscontrol</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>accesscontrole</name>
+	<name>accesscontrol</name>
 	<description>Access Control project for Spring Boot</description>
 	<!-- organisation details start -->
 	<licenses>
@@ -24,20 +24,27 @@
 		<url></url>
 	</organization>
 
-	<developers>
+	<!-- <developers>
 		<developer>
 			<epid>1118</epid>
 			<name>Tushar Mahajan</name>
 			<designation>JavaDeveloper</designation>
 		</developer>
 	</developers>
-
+ -->
 	<distributionManagement>
 	</distributionManagement>
 			
 	<!-- organisation details  ends -->
+	<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
 	<properties>
 		<java.version>1.8</java.version>
+		<qrgen.version>2.6.0</qrgen.version>
 	</properties>
 
 	<dependencies>
@@ -94,6 +101,32 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<dependency>
+            <groupId>com.github.kenglxn.qrgen</groupId>
+            <artifactId>javase</artifactId>
+            <version>${qrgen.version}</version>
+        </dependency>
+    <dependency>
+        <groupId>com.google.zxing</groupId>
+        <artifactId>core</artifactId>
+        <version>3.3.0</version>
+    </dependency>
+    <dependency>
+        <groupId>com.google.zxing</groupId>
+        <artifactId>javase</artifactId>
+        <version>3.3.0</version>
+    </dependency>
+	<dependency>
+		<groupId>org.jsmpp</groupId>
+		<artifactId>jsmpp</artifactId>
+		<version>2.3.5</version>
+	</dependency>
+	<dependency>
+    <groupId>com.jcraft</groupId>
+    <artifactId>jsch</artifactId>
+    <version>0.1.55</version>
+</dependency>
+	
 	</dependencies>
 
 	<build>
